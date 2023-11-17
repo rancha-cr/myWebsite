@@ -27,51 +27,68 @@
 
 		.container {
 			position:relative;
+			display:inline-block;
+			box-sizing:border-box;
 			width:100%;
 			height:0%;
 			padding-bottom:56.25%;
-			max-width: 100%;
+			max-width:100%;
 			flex: 1 0 auto;
   				flex-grow: 1;
   				flex-shrink: 0;
   				flex-basis: auto;
 		}
 		body {
-			margin:2rem;
-			padding:1rem;
-			text-align: left;
+			margin:0rem;
+			padding:0rem;
+			text-align:center;
 			font-family:'Urbit Sans Mono', Helvetica, sans-serif;
-			font-size:1.1rem;
+			font-size:100%;
 			color:#355E3B;
 			background-color:#fff;
 			text-decoration:none;
-			-moz-osx-font-smoothing: grayscale;
+			-moz-osx-font-smoothing:grayscale;
+ 			-webkit-font-smoothing:antialiased;
+ 			-webkit-text-size-adjust:none
 		}
 		.text {
-			padding-left:1rem;
-			padding-bottom:1rem;
-			margin-inline: 2rem;
+			display: block;
+			box-sizing: border-box;
+			max-width: 800px;
+			font-size: 100%;
+			text-align: left;
+			justify-content: center;
+			word-wrap: break-word;
+			padding-left: 1rem;
+			padding-bottom: 1rem;
+			margin-inline: auto;
 		}
 		.title {
+			padding-top: 2rem;
 			font-family: 'Urbit Sans', Helvetica, sans-serif;
-			font-size: 22px;
+			max-width: 1rem;
+			font-size: 5vmin;
 			text-align: center;
+			word-wrap: break-word;
+			max-width: 100%;
 			padding-bottom: 3vh;
+			justify-content: center;
 			text-shadow: 0.5px 0.5px 1px gray;
 
 		}
 		h2 {
-			text-align: center;
+			font-size: 5vmin;
 			justify-content: center;
 		}
 		h3 {
+			text-align: center;
 		}
 	</style>
 </head>
 <body>
 <div class="container">
 	<div class="title">
-	<h1>Strange☼Attraction</h1>
+	<h1>Strange ☼ Attraction</h1>
 		<h2>A M4L Device</h2>
 	</div>
 	<div class="text">
