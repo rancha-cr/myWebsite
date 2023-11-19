@@ -38,6 +38,15 @@
   				flex-shrink: 0;
   				flex-basis: auto;
 		}
+		.header {
+			display: inline-block;
+			position: sticky;
+			top: 10px;
+			font-size: 14px;
+			background: transparent;
+			color: #FFA500;
+			word-spacing: 10vw;
+		}
 		body {
 			margin:0rem;
 			padding:0rem;
@@ -50,6 +59,9 @@
 			-moz-osx-font-smoothing:grayscale;
  			-webkit-font-smoothing:antialiased;
  			-webkit-text-size-adjust:none
+		}
+		a {
+			color: #FF5F15;
 		}
 		.text {
 			display: block;
@@ -64,7 +76,7 @@
 			margin-inline: auto;
 		}
 		.title {
-			padding-top: 2rem;
+			padding-top: 1rem;
 			font-family: 'Urbit Sans', Helvetica, sans-serif;
 			max-width: 66rem;
 			font-size: 5vh;
@@ -73,12 +85,15 @@
 			max-width: 100%;
 			padding-bottom: 3vh;
 			justify-content: center;
-			text-shadow: 0.5px 0.5px 1px gray;
+			text-shadow: 0.5px 0.5px 1px black;
+		}
+		.blurry-text {
+			text-shadow: 0 0 1px #355e3b;
+			color: transparent;
 		}
 		h2 {
 			font-size: 5vh;
 			justify-content: center;
-			text-shadow: none;
 		}
 		h3 {
 			text-align: center;
@@ -87,6 +102,11 @@
 </head>
 <body>
 <div class="container">
+	<span class="header">
+		<a href="mailto:chaseloganrandall@gmail.com" target="_blank">Contact</a>
+		<a href="./index.html" target="_blank">Website</a>
+
+	</span>
 	<div class="title">
 	<h1>Strange ☼ Attraction</h1>
 		<h2>A M4L Device</h2>
