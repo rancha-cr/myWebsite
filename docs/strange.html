@@ -71,7 +71,8 @@
 			box-sizing: border-box;
 			max-width: 700px;
 			font-size: 100%;
-			text-align: left;
+			text-align: justify;
+			text-justify: inter-word;
 			justify-content: center;
 			word-wrap: break-word;
 			line-height: 1.4em;
@@ -89,7 +90,7 @@
 			max-width: 100%;
 			padding-bottom: 3vh;
 			justify-content: center;
-			text-shadow: 0.5px 0.5px 1px f05826;
+			text-shadow: 0.5px 0.5px 1px #f05826;
 			color: #f05826;
 			/* color: #71292e; */
 		}
@@ -102,7 +103,15 @@
 			justify-content: center;
 		}
 		h3 {
-			text-align: center;
+			font-size: 1.5em;
+			text-align: left;
+			font-style: italic;
+			line-height: 1.2em;
+			color: #014f5c;
+		}
+		code {
+			padding: 0.5em;
+			color: #b57575;
 		}
 	</style>
 </head>
@@ -118,19 +127,65 @@
 		<h2>A M4L Device</h2>
 	</div>
 	<div class="text">
-		<h3>What is <em>Strange Attraction</em>?</h3>
+		<h3>What is Strange Attraction?</h3>
 		<p>
 			Strange Attraction is a device for Max/MSP and Max for Live (M4L) that enables parameters within Ableton to be controlled by strange attractor algorithms.
 		</p>
 	</div>
 	<div class="text">
-		<h3>What are strange attractor algorithms?</h3>
+		<h3>What are strange attractor equations?</h3>
 		<p>
-			Strange attractor algorithms come from mathematics and the study of dynamical systems. In this field, what we call an <em>attractor</em> is a set of states that a system tends to evolve towards. For example, the swing of a pendulum clock can be modeled as a dynamical system, and we would see that the motion of the clock tends towards a particular position.
-		</p>
-		<p>
-			The mathematician Edward Lorenz
-		</p>
-	</div>
+	
+Strange attractor equations come from the field of mathematics known as dynamical systems. In this field, what we call an <em>attractor</em> is a set of states that a system tends to evolve towards. For example, the swing of a pendulum clock can be modeled as a dynamical system where the point of the swinging weight is plotted over time. In this example, the resulting system is a periodic function and the attractor is the equilibrium point (when the weight is at the bottom).
+</p>
+<p>
+In contrast, strange attractors exhibit chaotic behavior. Whereas a pendulum clock oscillates in a predictable pattern, strange attractors are complex and unpredictable. One of the ways they are used is to describe natural phenomena such as the flow of fluid in motion ("fluid dynamics").
+</p>
+<p>
+The mathematician Edward Lorenz was studying the behavior of rolling fluid convection when he discovered his Lorenz attractor. In his physical model, gas was placed in a solid rectangular box with a heat source at the bottom. 
+</p>
+</div>
+<div class="text">
+	<h3>Why should I use these equations?</h3>
+<p>
+Strange attractors are unique in two senses:
+	<ol>
+	<li>That the motion of the system never repeats itself (non-periodic).</li>
+	<li>That one cannot predict where on the attractor the system will be. Two points that are near eachother at one time will be arbitrarily far apart at other times.</li>
+	</ol>In our opinion, these qualities makes strange attractors ripe for musical applications.
+</p>
+</div>
+<div class="text">
+	<h3>How does <b>Strange Attraction</b> work?</h3>
+	<p>
+		<em>Strange Attraction</em> is built in Max/MSP, but all of the math is implemented in Javascript. This decoupled approach allows for the flexibility of Max with the response times of a language that isn't vector-based.
+	</p>
+	<p>
+		Let's look at the equations being used as they appear in the <code>attractors.js</code> file:
+	<pre>
+		<code>
+	// Lorenz Attractor
+	if (attractor == 1){
+	  if (isChanged){
+		dt = 0.005;
+	 	z_offset = -0.75;
+		gain = 0.03;
+
+		a = 10;
+		b = 28;
+		c = 8/3;
+	  }
+	  x = x + dt * (a * (y - x));
+	  y = y + dt * (x * (b - z) - y);
+	  z = z + dt * (x * y - c * z);
+	}
+		</code>
+<span style="font-size: 0.8em;">Note: thanks to timohoogland for sharing their code.</span>
+	</pre>
+	</p>
+	<p>
+		This is a simplified version of the original Lorenz attractor equations, translated into js.
+	</p>
+</div>
 </div>
 </body>
