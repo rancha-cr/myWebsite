@@ -133,7 +133,7 @@
 		</p>
 	</div>
 	<div class="text">
-		<h3>What are strange attractor equations?</h3>
+		<h3>What's a strange attractor?</h3>
 		<p>
 	
 Strange attractor equations come from the field of mathematics known as dynamical systems. In this field, what we call an <em>attractor</em> is a set of states that a system tends to evolve towards. For example, the swing of a pendulum clock can be modeled as a dynamical system where the point of the swinging weight is plotted over time. In this example, the resulting system is a periodic function and the attractor is the equilibrium point (when the weight is at the bottom).
@@ -162,8 +162,7 @@ Strange attractors are unique in two senses:
 	</p>
 	<p>
 		Let's look at the equations being used as they appear in the <code>attractors.js</code> file:
-	<pre>
-		<code>
+	<pre><code>
 	// Lorenz Attractor
 	if (attractor == 1){
 	  if (isChanged){
@@ -180,11 +179,25 @@ Strange attractors are unique in two senses:
 	  z = z + dt * (x * y - c * z);
 	}
 		</code>
-<span style="font-size: 0.8em;">Note: thanks to timohoogland for sharing their code.</span>
-	</pre>
+<span style="font-size: 0.8em;">Note: thanks to timohoogland for sharing their code.</span></pre>
 	</p>
 	<p>
 		This is a simplified version of the original Lorenz attractor equations, translated into js.
+	</p>
+	<h3>Using Strange Attraction</h3>
+	<p>
+		Strange Attraction is designed to be used as a device within Ableton. 
+		<ol>
+			<li>First, create a new MIDI track inside Ableton by typing Cmd+Shift+T (on Mac) or Ctrl+Shift+T (Windows).</li>
+			<li>Drag "Strange Attractor" from the M4L MIDI Devices folder onto the new MIDI track.</li>
+		</ol>
+	</p>
+	<p>
+		Strange Attractor is now ready to use. You will need to enable another track, either audio or MIDI, in order to use Strange Attractor.
+	</p>
+	<p>
+		Next, click the "Map" button and then navigate to some parameter you wish to control on your other track and click on it.
+		When you next press play on Ableton's transport, Strange Attractor will output MIDI values to your chosen parameter.
 	</p>
 </div>
 </div>
